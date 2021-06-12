@@ -8,23 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		2A41F7A026736FA600678B80 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A41F79F26736FA600678B80 /* main.cpp */; };
+		2A41F7B8267372D500678B80 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A41F7B7267372D500678B80 /* libglfw.3.dylib */; };
+		2A41F7B9267372F700678B80 /* libglfw.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A41F7B7267372D500678B80 /* libglfw.3.dylib */; };
+		2A41F7BB267375D000678B80 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A41F7BA267375D000678B80 /* glad.c */; };
+		2A41F7BE2673927600678B80 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A41F7BD2673927600678B80 /* Shader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		2A41F79A26736FA600678B80 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
+				2A41F7B9267372F700678B80 /* libglfw.3.dylib in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A41F79C26736FA600678B80 /* opengl_gradient_triangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = opengl_gradient_triangle; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A41F79F26736FA600678B80 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2A41F7AC26736FF200678B80 /* glfw3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw3.h; sourceTree = "<group>"; };
+		2A41F7AD26736FF200678B80 /* glfw3native.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw3native.h; sourceTree = "<group>"; };
+		2A41F7AF2673700A00678B80 /* glad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
+		2A41F7B12673700A00678B80 /* khrplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
+		2A41F7B7267372D500678B80 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libglfw.3.dylib; sourceTree = "<group>"; };
+		2A41F7BA267375D000678B80 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
+		2A41F7BC26738A6300678B80 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		2A41F7BD2673927600678B80 /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		2A41F7C126739B8400678B80 /* vertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vertexShader.glsl; sourceTree = "<group>"; };
+		2A41F7C226739C0900678B80 /* fragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fragmentShader.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A41F7B8267372D500678B80 /* libglfw.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +57,9 @@
 		2A41F79326736FA600678B80 = {
 			isa = PBXGroup;
 			children = (
+				2A41F7C026739B6600678B80 /* shaders */,
+				2A41F7B62673727C00678B80 /* libs */,
+				2A41F7A626736FBA00678B80 /* include */,
 				2A41F79E26736FA600678B80 /* opengl_gradient_triangle */,
 				2A41F79D26736FA600678B80 /* Products */,
 			);
@@ -57,9 +76,64 @@
 		2A41F79E26736FA600678B80 /* opengl_gradient_triangle */ = {
 			isa = PBXGroup;
 			children = (
+				2A41F7BA267375D000678B80 /* glad.c */,
 				2A41F79F26736FA600678B80 /* main.cpp */,
+				2A41F7BC26738A6300678B80 /* Shader.h */,
+				2A41F7BD2673927600678B80 /* Shader.cpp */,
 			);
 			path = opengl_gradient_triangle;
+			sourceTree = "<group>";
+		};
+		2A41F7A626736FBA00678B80 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				2A41F7AE2673700A00678B80 /* glad */,
+				2A41F7B02673700A00678B80 /* KHR */,
+				2A41F7AB26736FF200678B80 /* GLFW */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		2A41F7AB26736FF200678B80 /* GLFW */ = {
+			isa = PBXGroup;
+			children = (
+				2A41F7AC26736FF200678B80 /* glfw3.h */,
+				2A41F7AD26736FF200678B80 /* glfw3native.h */,
+			);
+			path = GLFW;
+			sourceTree = "<group>";
+		};
+		2A41F7AE2673700A00678B80 /* glad */ = {
+			isa = PBXGroup;
+			children = (
+				2A41F7AF2673700A00678B80 /* glad.h */,
+			);
+			path = glad;
+			sourceTree = "<group>";
+		};
+		2A41F7B02673700A00678B80 /* KHR */ = {
+			isa = PBXGroup;
+			children = (
+				2A41F7B12673700A00678B80 /* khrplatform.h */,
+			);
+			path = KHR;
+			sourceTree = "<group>";
+		};
+		2A41F7B62673727C00678B80 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				2A41F7B7267372D500678B80 /* libglfw.3.dylib */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		2A41F7C026739B6600678B80 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				2A41F7C126739B8400678B80 /* vertexShader.glsl */,
+				2A41F7C226739C0900678B80 /* fragmentShader.glsl */,
+			);
+			path = shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A41F7A026736FA600678B80 /* main.cpp in Sources */,
+				2A41F7BE2673927600678B80 /* Shader.cpp in Sources */,
+				2A41F7BB267375D000678B80 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +316,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				HEADER_SEARCH_PATHS = ./include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +330,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				HEADER_SEARCH_PATHS = ./include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
